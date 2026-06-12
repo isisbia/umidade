@@ -169,3 +169,6 @@ A aplicação exibe:
 ---
 
 ## 👨‍💻 Projeto acadêmico/IoT para monitoramento inteligente da umidade do solo - DSM/4° Semestre - Fatec Matão.
+
+```
+```
