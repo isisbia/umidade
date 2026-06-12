@@ -36,11 +36,28 @@ O projeto realiza a leitura da umidade do solo através de um sensor conectado a
 
 ```bash
 📦 projeto-umidade
-├── app.py                  # Aplicação principal Flask
-├── chaveapiisis.json       # Credenciais do Firebase
-├── dev_iot/                # Ambiente/projeto relacionado ao IoT
-└── .venv/                  # Ambiente virtual Python
-````
+├── app.py
+├── templates/
+├── static/
+├── requirements.txt
+├── .gitignore
+└── README.md
+```
+
+> ⚠️ O arquivo de credenciais do Firebase (`chaveapiisis.json`) não está incluído no repositório por segurança.
+
+---
+
+## 🔒 Arquivos Ignorados
+
+Adicione ao `.gitignore`:
+
+```gitignore
+.venv/
+__pycache__/
+chaveapiisis.json
+*.pyc
+```
 
 ---
 
@@ -59,7 +76,7 @@ O projeto realiza a leitura da umidade do solo através de um sensor conectado a
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/isisbia/umidade
+git clone https://github.com/isisbia/umidade.git
 ```
 
 Entre na pasta do projeto:
@@ -78,13 +95,13 @@ python -m venv .venv
 
 Ative o ambiente virtual:
 
-### Windows
+#### Windows
 
 ```bash
 .venv\Scripts\activate
 ```
 
-### Linux/Mac
+#### Linux/Mac
 
 ```bash
 source .venv/bin/activate
@@ -98,19 +115,25 @@ source .venv/bin/activate
 pip install flask firebase-admin pyserial
 ```
 
+Ou, caso exista um arquivo `requirements.txt`:
+
+```bash
+pip install -r requirements.txt
+```
+
 ---
 
 ### 4. Configure o Firebase
 
-1. Acesse o console do Firebase
-2. Crie um projeto
+1. Acesse o console do Firebase  
+2. Crie um projeto  
 3. Vá em:
 
 ```text
 Configurações do projeto → Contas de serviço
 ```
 
-4. Gere uma chave privada JSON
+4. Gere uma chave privada JSON  
 5. Salve o arquivo no projeto com o nome:
 
 ```text
@@ -129,9 +152,9 @@ PORTA_SERIAL = 'COM5'
 
 Exemplos:
 
-* `COM3`
-* `COM4`
-* `COM5`
+- `COM3`
+- `COM4`
+- `COM5`
 
 Você pode verificar a porta no **Gerenciador de Dispositivos do Windows**.
 
@@ -162,13 +185,21 @@ O sistema iniciará o servidor Flask.
 
 A aplicação exibe:
 
-* Umidade atual do solo (%)
-* Atualização automática em tempo real
-* Layout simples e intuitivo
+- Umidade atual do solo (%)
+- Atualização automática em tempo real
+- Layout simples e intuitivo
 
 ---
 
-## 👨‍💻 Projeto acadêmico/IoT para monitoramento inteligente da umidade do solo - DSM/4° Semestre - Fatec Matão.
+## 👨‍💻 Sobre o Projeto
 
-```
-```
+Projeto acadêmico desenvolvido para a disciplina de **IoT / Desenvolvimento de Sistemas Multiplataforma (DSM)** da **Fatec Matão – 4º semestre**, com foco em monitoramento inteligente da umidade do solo utilizando Arduino e integração com serviços em nuvem.
+
+---
+
+## 👥 Integrantes
+
+- Isis Beatriz
+- Vitor
+- João
+````
